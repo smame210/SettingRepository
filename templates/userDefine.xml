@@ -1,0 +1,13 @@
+<templateSet group="userDefine">
+  <template name="/**" value="/**&#10; * @Title: $enclosing_method$&#10; * @Description: TODO(这里用一句话描述这个方法的作用)&#10; * @param @param $tags$&#10; * @return @return $return_type$&#10; * @author $user$&#10; * @throws&#10; * @date $date$ $time$&#10; */" shortcut="ENTER" description="方法注释" toReformat="false" toShortenFQNames="true">
+    <variable name="enclosing_method" expression="methodName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="tags" expression="methodParameters()" defaultValue="" alwaysStopAt="true" />
+    <variable name="return_type" expression="methodReturnType()" defaultValue="" alwaysStopAt="true" />
+    <variable name="user" expression="user()" defaultValue="" alwaysStopAt="true" />
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="true" />
+    <variable name="time" expression="time()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
